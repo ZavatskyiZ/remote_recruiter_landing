@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualizer</title>
+    <title>Recruiter RemotEmployees</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,6 +12,16 @@
 </head>
 
 <body>
+    <script>
+        let submitted = false;
+    </script>
+    <iframe
+        name="hidden_iframe"
+        id="hidden_iframe"
+        style="display: none"
+        onload="
+              if (submitted) {
+                window.location ='/thanks.html'}"></iframe>
     <header>
         <div class="container">
             <div class="navbar">
@@ -22,14 +32,14 @@
                     
                         <a href="#advantages" onclick="smoothScroll()">О вакансии</a>
                         <a href="#who-is">Обязанности</a>
-                        <a href="#looking-for">Требования</a>
+                        <a href="#req">Требования</a>
                    
                 </div>
                 <div class="navbar-menu mobile" id="navbarMenu">
                     
                         <a href="#advantages" onclick="mobileMenu()">О вакансии</a>
                         <a href="#who-is" onclick="mobileMenu()">Обязанности</a>
-                        <a href="#looking-for" onclick="mobileMenu()">Требования</a>
+                        <a href="#req" onclick="mobileMenu()">Требования</a>
                    
                 </div>
                 <div class="navbar-social desktop">
@@ -73,8 +83,12 @@
                         Ищем рекрутера</h1>
                     <p>В компанию Remote Employees требуется рекрутер для поиска персонала для работы
                         на зарубежных проектах</p>
-                    <form action="">
-                        <input type="text" name="entry.444131703" id="heroInput" onclick="heroNumber()">
+                    <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeqrv1N0Iz1X5HprwTKcv-hmuBFWPy8XQ4gOoTQoBNcDZn-aw/formResponse"
+                        method="POST" 
+                        role="form"
+                        target="hidden_iframe"
+                        onsubmit="submitted=true">
+                        <input type="text" name="entry.84773266" id="heroInput" onclick="heroNumber()">
                         <button type="submit">
                             Отправить
                         </button>
@@ -87,20 +101,21 @@
             </div>
     </div>
     </section>
+    <div class="whitespace"></div>
     <section class="about-us">
         <div class="wrap">
             <div class="container">
                 <h1 class="mobile">Что мы за компания?
                 </h1>
                 <div class="flex">
-                    <div class="who-is-text">
+                    <div class="about-us-text">
                         <h1 class="desktop">Что мы за компания?
                         </h1>
                         <p>RemotEmployees — это аутстаффинговая компания, которая предоставляет рабочие места в Украине ориентируясь на Европейский
                             и Американский рынок. Сотрудничество с нами позволит вам приобрести новые умения в сфере IT и маркетинга, а также развить навыки общения с иностранными носителями языка.
-                            </p>
+                        </p>
                     </div>
-                    <div class="who-is-pic">
+                    <div class="pic">
                         <img src="/img/about.svg" alt="" loading="lazy">
                     </div>
                 </div>
@@ -154,13 +169,14 @@
                             а также составляет заявки на подбор персонала и среди десятков резюме должен находить отличных специалистов в свою компанию.
                             </p>
                     </div>
-                    <div class="who-is-pic">
+                    <div class="pic">
                         <img src="/img/who-is.svg" alt="" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <div class="whitespace" id="req"></div>
     <section class="req">
         <div class="wrap">
             <div class="container">
@@ -175,17 +191,14 @@
                         Если ты любишь общаться с людьми, знаешь английский язык и мечтаешь работать в IT сфере, но у тебя нет специальных  и технических знаний, то мы приглашаем тебя попробовать свои силы на позиции Рекрутера.
                     </p>
                     </div>
-                    <div class="who-is-pic">
+                    <div class="pic">
                         <img src="/img/req.svg" alt="" loading="lazy">
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <div class="whitespace" id="looking-for"></div>
-    
     <div class="whitespace"></div>
-   
     <section class="contact-form">
         <div class="wrap">
             <div class="container">
@@ -194,10 +207,14 @@
                     <img src="/img/contact-form.svg" alt="" loading="lazy">
                     <div class="full-form">
                         <h1 class="desktop"><span>Откликнуться </span> на вакансию</h1>
-                        <form action="" target="_self" onsubmit="return postToGoogle()">
-                            <input type="text" placeholder="Ф.И.О" name="entry." required>
-                            <input type="text" placeholder="Telegram/Viber" name="entry." required>
-                            <input type="tel" placeholder="+38" name="entry." required>
+                        <form action="https://docs.google.com/forms/u/1/d/e/1FAIpQLSeqrv1N0Iz1X5HprwTKcv-hmuBFWPy8XQ4gOoTQoBNcDZn-aw/formResponse"
+                                method="POST" 
+                                role="form"
+                                target="hidden_iframe"
+                                onsubmit="submitted=true">
+                            <input type="text" placeholder="Ф.И.О" name="entry.538969021" required>
+                            <input type="text" placeholder="Telegram/Viber" name="entry.1501285026" required>
+                            <input type="tel" placeholder="+38" name="entry.84773266" required>
                             <input type="submit" value="Отправить">
                         </form>
                     </div>

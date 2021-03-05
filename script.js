@@ -32,30 +32,3 @@ function smoothScroll(){
         })
       }
 }
-function postToGoogle() {
-  var field1 = $("#nameField").val();
-  var field2 = $("#mobField").val();
-  var field3 = $("#emailField").val();
-  var field4 = $("#heroInput").val()
-
-
-
-
-  $.ajax({
-      url: "https://docs.google.com/forms/d/e/1FAIpQLSeKEpFSn9anMKaSXArhHctyQXtz_fCzgKKDxWlmtBoWUuVWOg/formResponse?",
-      data: { "entry.396730978": field1, "entry.444131703": field2, "entry.1352816657": field3, "entry.444131703": field4 },
-      type: "POST",
-      dataType: "xml",
-      success: function(d)
-{
-},
-error: function(x, y, z)
-{
-
-window.location = "/thanks.html"
-
-
-}
-  });
-return false;
-}
